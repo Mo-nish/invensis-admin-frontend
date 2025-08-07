@@ -81,7 +81,7 @@ function App() {
     <ThemeProvider theme={adminTheme}>
       <CssBaseline />
       <AuthProvider>
-        <Router>
+        <Router basename="/admin">
           <AppRoutes />
           <ToastContainer
             position="top-right"
