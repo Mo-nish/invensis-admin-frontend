@@ -1,4 +1,10 @@
-# Handle static assets first
+# Handle admin-prefixed static assets first
+/admin/static/* /admin/static/* 200
+/admin/manifest.json /admin/manifest.json 200
+/admin/favicon.ico /admin/favicon.ico 200
+/admin/logo*.png /admin/logo*.png 200
+
+# Handle regular static assets
 /static/* /static/* 200
 /manifest.json /manifest.json 200
 /favicon.ico /favicon.ico 200
@@ -6,7 +12,7 @@
 /robots.txt /robots.txt 200
 
 # Handle React Router routes
-/admin/* /index.html 200
+/admin/* /admin/index.html 200
 /login /index.html 200
 /register /index.html 200
 /dashboard /index.html 200
