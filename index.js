@@ -20,7 +20,12 @@ const PORT = process.env.PORT || 5001;
 
 // CORS configuration for production
 app.use(cors({
-  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ['http://localhost:3000', 'http://localhost:3001'],
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [
+    'http://localhost:3000', 
+    'http://localhost:3001',
+    'https://invensis-admin-frontend.onrender.com',
+    'https://hiring.invensis.com'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
