@@ -1,0 +1,7 @@
+/*    /index.html   200
+/manifest.json    /manifest.json   200
+/admin/manifest.json    /manifest.json   200
+/admin/*    /index.html   200
+/login    /index.html   200
+/register    /index.html   200
+/dashboard    /index.html   200 
