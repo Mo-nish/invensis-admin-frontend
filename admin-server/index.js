@@ -11,7 +11,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3002', 'http://localhost:3000'],
+  origin: [
+    'http://localhost:3002', 
+    'http://localhost:3000',
+    'https://invensis-admin-frontend.onrender.com',
+    'https://hiring.invensis.com'
+  ],
   credentials: true
 }));
 app.use(express.json());

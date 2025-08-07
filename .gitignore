@@ -119,3 +119,5 @@ cleanup-test-data.js
 # Backup files
 *.bak
 *.backup 
+node_modules
+node_modules

@@ -1,32 +1,70 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin/login",
+      "destination": "/admin/login/index.html"
+    },
+    {
+      "source": "/admin/register",
+      "destination": "/admin/register/index.html"
+    },
+    {
+      "source": "/admin/dashboard",
+      "destination": "/admin/dashboard/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login/index.html"
+    },
+    {
+      "source": "/register",
+      "destination": "/register/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/client/build/static/$1"
+      "src": "/admin",
+      "dest": "/admin/index.html"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/client/build/favicon.ico"
+      "src": "/admin/login",
+      "dest": "/admin/login/index.html"
     },
     {
-      "src": "/manifest.json",
-      "dest": "/client/build/manifest.json"
+      "src": "/admin/register",
+      "dest": "/admin/register/index.html"
+    },
+    {
+      "src": "/admin/dashboard",
+      "dest": "/admin/dashboard/index.html"
+    },
+    {
+      "src": "/login",
+      "dest": "/login/index.html"
+    },
+    {
+      "src": "/register",
+      "dest": "/register/index.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/dashboard/index.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/index.html"
+      "dest": "/index.html"
     }
-  ],
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/build"
+  ]
 } 

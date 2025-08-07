@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Set the base URL for admin API
-axios.defaults.baseURL = 'http://localhost:5002';
+axios.defaults.baseURL = 'https://invensis-admin-api.onrender.com';
 
 const AuthContext = createContext();
 
